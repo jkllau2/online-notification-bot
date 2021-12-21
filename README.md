@@ -1,6 +1,6 @@
 # Project Name
 
-Online Notification Bot
+Online Notification Bot for Discord
 
 ## Installation
 
