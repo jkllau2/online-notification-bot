@@ -1,6 +1,6 @@
 # Project Name
 
-"Check when your Friends are online" Notification Bot for Discord
+"Check when your Friends are online in a specific channel" Notification Bot for Discord
 
 ## Installation
 
