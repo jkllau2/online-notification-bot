@@ -1,11 +1,13 @@
 # Project Name
 
-Online Notification Bot for Discord
+"Check when your Friends are online" Notification Bot for Discord
 
 ## Installation
 
-create a file called `bot-config.json` at the root and put in your bot `token`
+1. Create a file called `bot-config.json` at the root and put in your bot `token`
+2. Fill in correct configuration in `config.json`
 
 ## Usage
 
-`npm run dev`
+1. Run `npm i`
+2. Run `npm run dev`
