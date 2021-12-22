@@ -27,7 +27,7 @@ module.exports = {
       })
       const usernamesOnline = membersOnline.map(m => m.username)
 
-      whiteListIds.map((id) => {
+      whiteListIds.forEach((id) => {
         client.users.cache.get(id).send(`More than ${targetOnlineMembersCount} members are online in ${channelName}! ${usernamesOnline.join(', ')}`)
       })
     }
