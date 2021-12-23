@@ -1,5 +1,6 @@
 const { channelId, targetOnlineMembersCount, whiteListIds } = require('../config.json')
 const client = require('../index')
+const nodeCache = require('../utilities/cache')
 
 module.exports = {
   name: 'voiceStateUpdate',
