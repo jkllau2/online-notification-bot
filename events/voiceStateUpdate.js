@@ -1,4 +1,9 @@
-const { channelId, targetOnlineMembersCount, whiteListIds } = require('../config.json')
+const {
+  channelId,
+  minTargetOnlineMembersCount,
+  maxTargetOnlineMembersCount,
+  whiteListIds
+} = require('../config.json')
 const client = require('../index')
 const nodeCache = require('../utilities/cache')
 
@@ -19,7 +24,8 @@ module.exports = {
     const memberList = (newState.guild.channels.cache.get(channelId).members).map((member => member))
     const { name: channelName } = newState.guild.channels.cache.get(channelId)
 
-    if (memberList.length >= targetOnlineMembersCount) {
+    // if members in voice channel between min & max number set in config
+    if (memberList.length >= minTargetOnlineMembersCount && memberList.length <= maxTargetOnlineMembersCount) {
 
       let membersOnline = []
       memberList.map((member) => {
@@ -28,8 +34,9 @@ module.exports = {
       })
       const usernamesOnline = membersOnline.map(m => m.username)
 
+      // for each member in whitelist, send notification to each person
       whiteListIds.forEach((id) => {
-        client.users.cache.get(id).send(`More than ${targetOnlineMembersCount} members are online in ${channelName}! ${usernamesOnline.join(', ')}`)
+        client.users.cache.get(id).send(`More than ${minTargetOnlineMembersCount} members are online in ${channelName}! ${usernamesOnline.join(', ')}`)
       })
     }
   }
