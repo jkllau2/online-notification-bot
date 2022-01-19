@@ -1,8 +1,9 @@
 {
-  "channelId": "922657249728528436",
+  "channelId": "922657249728528437",
   "minTargetOnlineMembersCount": 2,
   "maxTargetOnlineMembersCount": 6,
   "whiteListIds": [
-    "111985731932561408"
+    "111985731932561408",
+    "786088508049195018"
   ]
 }
