@@ -10,4 +10,6 @@ module.exports = (client) => {
       client.on(event.name, (...args) => event.execute(...args))
     }
   }
+
+  client.on('error', (error) => console.log(error))
 }
