@@ -55,10 +55,10 @@ module.exports = {
               nodeCache.set(`${id}`, { loggedTime: currentTime }, ttl)
               console.log(`Saved in cache for user: [${username}] at UnixTimeStamp: ${currentTime}`)
               Vendor.send(id)
-            } else if ((currentTime - nodeCache.get(`${id}`) >= timeThreshold)) {
+            } else if ((currentTime - nodeCache.get(`${id}`).loggedTime) >= timeThreshold) {
               Vendor.send(id)
               console.log(`Updating cache with new timestamp for user: [${username}]`)
-              nodeCache.set(`${id}`, { loggedTime }, ttl)
+              nodeCache.set(`${id}`, { loggedTime: currentTime }, ttl)
             } else {
               console.log(`It\'s too soon to send a notification for member: ${username}`)
             }
