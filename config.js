@@ -1,5 +1,5 @@
 const config = {
-  test: {
+  development: {
     "channelId": "922657249728528437",
     "vcMinCount": 1,
     "vcMaxCount": 5,

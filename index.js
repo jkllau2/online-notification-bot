@@ -1,4 +1,4 @@
-global.config = require('./config').test
+global.config = require('./config')[process.env['NODE_ENV']]
 
 const { Client, Intents } = require('discord.js')
 const { token } = require('./bot-config.json')
@@ -16,3 +16,5 @@ module.exports = client
 
 require('./handler')(client)
 client.login(token)
+console.log(`Starting [${process.env['NODE_ENV']}] server...`)
+
