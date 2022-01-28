@@ -21,7 +21,7 @@ const dictionary = [
   },
   {
     url: 'https://tenor.com/view/abey-aaja-akhshay-time-pass-ho-jayega-smile-gif-17934692',
-    probability: 0.7,
+    probability: 1,
     note: 'abey aaja'
   },
   {
@@ -51,7 +51,7 @@ const dictionary = [
   },
   {
     url: 'https://tenor.com/view/arabpunkz-habibi-yallah-dance-party-gif-24160322',
-    probability: 0.95,
+    probability: 2,
     note: 'arabpunkz habibi'
   },
 ]
