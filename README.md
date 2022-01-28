@@ -11,5 +11,5 @@ Note: bot `token` can be generated at [the Discord developer portal](https://dis
 
 ## Usage
 
-1. Run `npm i`
+1. Run `npm i` to install dependencies
 2. Run `npm run dev`
