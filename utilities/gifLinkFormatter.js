@@ -1,17 +1,24 @@
-function gifLinkFormatter(userList) {
-  if (!Array.isArray(userList) || userList.length === 0) {
-    return `https://gfycat.com/memorableoilyamericanmarten`
+const dataSource = require('./gifDataSource')
+
+const randomizer = (options) => {
+  let i, weights = []
+
+  for (i = 0; i < options.length; i++) {
+    weights[i] = options[i].probability + (weights[i - 1] || 0)
   }
-  // brooklyn 99
-  if (userList >= 5) {
-    return (
-      `https://gfycat.com/antiquecomplicatedelkhound`
-    )
+
+  let random = Math.random() * weights[weights.length - 1]
+
+  for (i = 0; i < weights.length; i++) {
+    if (weights[i] > random)
+      break
   }
-  // lotr
-  return (
-    `https://gfycat.com/memorableoilyamericanmarten`
-  )
+  console.log('Url', options[i].url)
+  return options[i].url
+}
+
+const gifLinkFormatter = () => {
+  return randomizer(dataSource)
 }
 
 module.exports = gifLinkFormatter
