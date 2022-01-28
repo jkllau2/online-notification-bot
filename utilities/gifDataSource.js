@@ -51,7 +51,7 @@ const dictionary = [
   },
   {
     url: 'https://tenor.com/view/arabpunkz-habibi-yallah-dance-party-gif-24160322',
-    probability: 0.8,
+    probability: 0.95,
     note: 'arabpunkz habibi'
   },
 ]
