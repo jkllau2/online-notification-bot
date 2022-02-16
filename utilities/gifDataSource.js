@@ -54,6 +54,16 @@ const dictionary = [
     probability: 2,
     note: 'arabpunkz habibi'
   },
+  {
+    url: 'https://tenor.com/view/come-to-me-love-bedtime-snuggles-i-miss-you-gif-15743717',
+    probability: 0.5,
+    note: 'come to me bedtime'
+  },
+  {
+    url: 'https://gfycat.com/indeliblerespectfulcrow-brooklyn-ninenine-brooklyn-99-reaction-response',
+    probability: 1,
+    note: 'brooklyn 99 excited'
+  },
 ]
 
 module.exports = dictionary
