@@ -13,7 +13,7 @@ const randomizer = (options) => {
     if (weights[i] > random)
       break
   }
-  console.log('Url', options[i].url)
+
   return options[i].url
 }
 

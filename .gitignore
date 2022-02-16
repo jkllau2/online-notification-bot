@@ -30,3 +30,5 @@ docs/docs.json
 .DS_Store
 
 bot-config.json
+
+.vscode
